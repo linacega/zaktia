@@ -1,0 +1,1 @@
+Fuente de construcción del HTML exacto aprobado de Zakti. El workflow reconstruye index.html desde la plantilla y los fragmentos base64, y valida SHA-256 antes de publicar.
