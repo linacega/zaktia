@@ -1,0 +1,92 @@
+name: Fix Zakti layout
+
+on:
+  push:
+    branches: [piano]
+    paths:
+      - '.github/workflows/fix-zakti-layout.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: piano
+
+      - name: Fix layout
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          # Restore the hero proportions from the approved version.
+          s = s.replace(
+              '.hero-grid{min-height:710px;display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center;padding:70px 0 85px}',
+              '.hero-grid{min-height:720px;display:grid;grid-template-columns:1.08fr .92fr;gap:72px;align-items:center;padding:72px 0 88px}'
+          )
+          s = s.replace(
+              '.portraitbox{position:relative;max-width:500px;margin-left:auto}',
+              '.portraitbox{position:relative;max-width:500px;width:100%;margin-left:auto;margin-right:0}'
+          )
+
+          # Add a clean editorial panel used instead of low-resolution repeated photos.
+          if '.feature-panel{' not in s:
+              s = s.replace(
+                  '.story{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}',
+                  '.story{display:grid;grid-template-columns:1fr 1fr;gap:62px;align-items:center}.feature-panel{background:var(--cream);border:1px solid var(--line);border-radius:28px;padding:34px;min-height:260px;display:flex;flex-direction:column;justify-content:center}.feature-panel.darkpanel{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.13)}'
+              )
+
+          # Restore doctor image loading from the previous non-blurry source fragments.
+          s = s.replace(
+              '<img class="portrait" src="assets/doctor.webp" alt="Dra. Martha Montaño">',
+              '<img id="doctorPortrait" class="portrait" alt="Dra. Martha Montaño">'
+          )
+
+          # Replace blurred secondary images with intentional editorial panels.
+          s = s.replace(
+              '<img class="photo" src="assets/therapy.webp" alt="Terapia de bienestar Zakti">',
+              '<div class="feature-panel"><div class="eyebrow">Acompañamiento integral</div><h3 class="title" style="font-size:38px">Una ruta pensada para cada persona.</h3><p class="copy">La valoración permite orientar el proceso antes de elegir una terapia o técnica específica.</p></div>'
+          )
+          s = s.replace(
+              '<img class="photo" src="assets/abhyanga.webp" alt="Masaje Ayurveda">',
+              '<div class="feature-panel"><div class="eyebrow">Cuidado corporal</div><h3 class="title" style="font-size:38px">Terapias con intención, no por acumulación.</h3><p class="copy">Masajes y técnicas complementarias se integran según la necesidad de cada proceso.</p></div>'
+          )
+          s = s.replace(
+              '<img class="training-photo" src="assets/flowers.webp" alt="Formación y bienestar Zakti">',
+              '<div class="feature-panel"><div class="eyebrow">Formación aplicada</div><h3 class="title" style="font-size:36px">Conocimiento para la vida y la práctica profesional.</h3></div>'
+          )
+          s = s.replace(
+              '<img class="photo" src="assets/flowers.webp" alt="Productos y preparados Zakti">',
+              '<div class="feature-panel"><div class="eyebrow">Autocuidado</div><h3 class="title" style="font-size:38px">Productos seleccionados para acompañar hábitos de bienestar.</h3></div>'
+          )
+
+          # Keep formation balanced without forcing an oversized image slot.
+          s = s.replace(
+              '.training-photo{width:100%;height:300px;object-fit:cover;border-radius:28px;box-shadow:0 10px 34px rgba(65,45,36,.07)}',
+              '.training-photo{width:100%;height:auto;object-fit:contain;border-radius:28px}'
+          )
+
+          # Add portrait loader only once. Existing p1..p5 files are already in the repo.
+          loader = "async function portrait(){try{let a=await Promise.all([1,2,3,4,5].map(i=>fetch('assets/p'+i+'.txt?v=3').then(r=>r.text())));document.getElementById('doctorPortrait').src='data:image/jpeg;base64,'+a.join('')}catch(e){console.error(e)}}portrait();"
+          if 'async function portrait()' not in s:
+              s = s.replace('render();\n</script>', loader + 'render();\n</script>')
+              s = s.replace('render();</script>', loader + 'render();</script>')
+
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit corrected page
+        run: |
+          git config user.name "Lina Cega"
+          git config user.email "62660188+linacega@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "Restaurar proporciones y limpiar imágenes de Zakti"
+          git push origin piano
