@@ -1,0 +1,240 @@
+on-copy">
+            Charlas, talleres, programas de bienestar y actividades dirigidas a equipos, estudiantes y profesionales vinculados con la salud.
+          </p>
+          <div class="corp-points">
+            <div>Charlas y talleres</div>
+            <div>Bienestar para equipos</div>
+            <div>Formación profesional</div>
+            <div>Modalidad presencial o virtual</div>
+          </div>
+        </div>
+        <div class="corp-card">
+          <span class="eyebrow">Propuesta a la medida</span>
+          <h3>Cuéntanos qué necesita tu organización.</h3>
+          <p>Podemos estructurar el alcance según público, objetivo, modalidad, duración y temática.</p>
+          <a class="btn btn-primary" href="#" data-wa="Hola Zakti, represento una empresa o universidad y quiero conocer su portafolio corporativo.">
+            Solicitar propuesta
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nosotros">
+      <div class="container quote">
+        <span class="eyebrow">La esencia de Zakti</span>
+        <blockquote>“Acompañar a cada persona como un ser único y entregarle herramientas para participar activamente en su bienestar.”</blockquote>
+        <p>
+          Zakti nace de la búsqueda de una mirada más integral de la práctica médica. Ese camino llevó a la Dra. Martha Montaño a profundizar en Ayurveda y complementar su formación con distintas técnicas terapéuticas.
+        </p>
+        <div class="doctor-mini">
+          <img src="__IMG_1__" alt="Dra. Martha Montaño">
+          <div><strong>Dra. Martha Montaño</strong><span>Creadora de Zakti Ayurveda</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2 class="section-title">Antes de comenzar.</h2>
+          <p class="section-copy">Respuestas rápidas para orientar mejor la primera conversación.</p>
+        </div>
+        <div>
+          <details open>
+            <summary><span>¿Dónde atiende Zakti?</span><span class="plus">+</span></summary>
+            <p>Actualmente la atención presencial se realiza en Medellín, cerca del Centro Comercial Unicentro. Algunos procesos también pueden desarrollarse de forma virtual.</p>
+          </details>
+          <details>
+            <summary><span>¿Cómo sé qué servicio necesito?</span><span class="plus">+</span></summary>
+            <p>Puedes escribir por WhatsApp y contar brevemente qué estás buscando. Zakti te orientará sobre el mejor punto de entrada.</p>
+          </details>
+          <details>
+            <summary><span>¿Los cursos incluyen certificación?</span><span class="plus">+</span></summary>
+            <p>Varios programas incluyen certificación y materiales. Las condiciones específicas se confirman en la información de cada formación.</p>
+          </details>
+          <details>
+            <summary><span>¿Puedo contratar una actividad para una empresa o universidad?</span><span class="plus">+</span></summary>
+            <p>Sí. Zakti está desarrollando una línea de charlas, talleres y propuestas para organizaciones y profesionales relacionados con salud y bienestar.</p>
+          </details>
+          <details>
+            <summary><span>¿Puedo comprar productos en línea?</span><span class="plus">+</span></summary>
+            <p>En esta primera etapa la consulta y compra se gestiona por WhatsApp. Más adelante la web puede integrar pago y automatización.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container">
+        <span class="eyebrow">Tu siguiente paso</span>
+        <h2 class="section-title">Tu proceso puede empezar con una conversación.</h2>
+        <p>Cuéntanos qué estás buscando y recibe orientación sobre consulta, terapias, formación, productos o propuestas para organizaciones.</p>
+        <a class="btn" href="#" data-wa="Hola Zakti, quiero recibir información y saber cuál puede ser el mejor camino para mí.">
+          Hablar con Zakti por WhatsApp <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="__IMG_0__" alt="Zakti Ayurveda"></div>
+          <p style="margin-top:18px;max-width:360px">Empoderar para la salud, equilibrio y bienestar.</p>
+        </div>
+        <div>
+          <div class="footer-title">Contacto</div>
+          <a href="#" data-wa="Hola Zakti, quiero recibir información.">+57 316 536 7579</a>
+          <a href="mailto:zaktiayurveda@gmail.com">zaktiayurveda@gmail.com</a>
+          <p>Medellín, Colombia · Cerca de Unicentro</p>
+        </div>
+        <div>
+          <div class="footer-title">Importante</div>
+          <p>La información de este sitio es orientativa y no sustituye una valoración médica individual. Los servicios complementarios se realizan según valoración y criterio profesional.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Zakti Ayurveda · Dra. Martha Montaño</div>
+    </div>
+  </footer>
+
+  <button class="wa-float" data-wa="Hola Zakti, quiero recibir información." aria-label="Abrir WhatsApp de Zakti">
+    <span class="wa-dot"></span><span>WhatsApp</span>
+  </button>
+
+  <div class="modal-backdrop" id="serviceModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <span class="eyebrow" id="modalGroup">Servicio</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+      <div class="modal-meta">
+        <span id="modalDuration"></span>
+        <span id="modalPrice"></span>
+      </div>
+      <button class="btn btn-primary" id="modalWa">Consultar por WhatsApp <span class="arrow">→</span></button>
+    </div>
+  </div>
+
+  <script>
+    const WHATSAPP = "573165367579";
+
+    const services = [
+      {name:"Consulta médica integral",group:"Consulta",duration:"1:30–2 h",price:"$170.000",text:"Evaluación individual para comprender el estado actual, hábitos y necesidades, y orientar una ruta de acompañamiento."},
+      {name:"Abhyanga",group:"Masajes",duration:"45–90 min",price:"Desde $130.000",text:"Masaje Ayurveda con aceites tibios, adaptado al proceso y necesidades de cada persona."},
+      {name:"Masaje para embarazadas",group:"Masajes",duration:"60 min",price:"$170.000",text:"Acompañamiento corporal desde el cuarto mes de gestación, sujeto a valoración."},
+      {name:"Basti",group:"Terapias",duration:"45 min",price:"$200.000",text:"Aplicación localizada de aceite tibio dentro de un proceso de cuidado individual."},
+      {name:"Netrabasti",group:"Terapias",duration:"45–60 min",price:"$200.000",text:"Técnica Ayurveda tradicional para el área ocular, realizada según valoración profesional."},
+      {name:"Nasya / Karnapurana",group:"Terapias",duration:"40 min",price:"Desde $100.000",text:"Técnicas tradicionales para nariz y oído, integradas como apoyo complementario."},
+      {name:"Masaje de espalda",group:"Masajes",duration:"40 min",price:"$130.000",text:"Masaje con aceite tibio orientado al descanso y relajación de la espalda."},
+      {name:"Padyam",group:"Masajes",duration:"45–60 min",price:"$130.000",text:"Masaje Ayurveda de pies con trabajo manual sobre puntos tradicionales."},
+      {name:"Shantala",group:"Masajes",duration:"45 min",price:"$130.000",text:"Espacio acompañado para aprender masaje tradicional para bebés y niños."},
+      {name:"Udvartanam",group:"Masajes",duration:"60 min",price:"$200.000",text:"Técnica corporal tradicional con polvos o cremas dentro de procesos de autocuidado."},
+      {name:"Masaje Kobido",group:"Masajes",duration:"60–75 min",price:"$160.000",text:"Masaje facial manual japonés orientado al cuidado natural del rostro y la relajación."},
+      {name:"Chi Nei Tsang",group:"Terapias",duration:"45–60 min",price:"$130.000",text:"Trabajo corporal manual en abdomen orientado a conciencia corporal y bienestar."},
+      {name:"Terapias energéticas",group:"Terapias",duration:"45–60 min",price:"$130.000",text:"Reiki, sanación pránica y cristales como prácticas complementarias de bienestar."},
+      {name:"Sueroterapia",group:"Otros",duration:"30–45 min",price:"Desde $220.000",text:"Servicio complementario administrado bajo criterio profesional y sujeto a valoración."}
+    ];
+
+    const training = [
+      {name:"Formación en Reiki",tag:"3 niveles + maestría",price:"Desde $265.000"},
+      {name:"Flores de Bach",tag:"Formación intensiva",price:"$530.000"},
+      {name:"Radiónica y Radiestesia",tag:"2 días",price:"$720.000"},
+      {name:"Formación en Kobido",tag:"3 días",price:"$930.000"},
+      {name:"Ciclo de Cocina Ayurveda",tag:"10 talleres",price:"Desde $190.000"},
+      {name:"Diplomado en Nutrición y Masaje Ayurveda",tag:"Programa avanzado",price:"Desde $5.580.000"}
+    ];
+
+    function openWa(text){
+      window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(text),"_blank","noopener,noreferrer");
+    }
+
+    document.querySelectorAll("[data-wa]").forEach(el=>{
+      el.addEventListener("click",e=>{e.preventDefault();openWa(el.dataset.wa)});
+    });
+
+    const mobileBtn=document.getElementById("mobileBtn");
+    const mobileMenu=document.getElementById("mobileMenu");
+    mobileBtn.addEventListener("click",()=>{
+      const open=mobileMenu.classList.toggle("open");
+      mobileBtn.setAttribute("aria-expanded",String(open));
+    });
+    mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobileMenu.classList.remove("open")));
+
+    document.querySelectorAll("[data-scroll]").forEach(el=>{
+      el.addEventListener("click",()=>{
+        document.querySelector(el.dataset.scroll)?.scrollIntoView({behavior:"smooth"});
+      });
+    });
+
+    const list=document.getElementById("serviceList");
+    const filters=document.querySelectorAll(".filter");
+    let active="Todos";
+
+    function renderServices(){
+      list.innerHTML=services
+        .filter(s=>active==="Todos"||s.group===active)
+        .map((s,i)=>`
+          <div class="service-row">
+            <div>
+              <h3>${s.name}</h3>
+              <p>${s.text}</p>
+            </div>
+            <div class="service-meta"><span>${s.duration}</span><strong>${s.price}</strong></div>
+            <button class="service-cta" data-service="${services.indexOf(s)}">Ver detalle <span class="arrow">→</span></button>
+          </div>
+        `).join("");
+      list.querySelectorAll("[data-service]").forEach(btn=>{
+        btn.addEventListener("click",()=>openService(+btn.dataset.service));
+      });
+    }
+
+    filters.forEach(btn=>btn.addEventListener("click",()=>{
+      filters.forEach(x=>x.classList.remove("active"));
+      btn.classList.add("active");active=btn.dataset.filter;renderServices();
+    }));
+
+    const trainingList=document.getElementById("trainingList");
+    trainingList.innerHTML=training.map(t=>`
+      <div class="training-item">
+        <div><small>${t.tag}</small><strong>${t.name}</strong><span>${t.price}</span></div>
+        <button aria-label="Consultar ${t.name}" data-training="${t.name}">→</button>
+      </div>
+    `).join("");
+    trainingList.querySelectorAll("[data-training]").forEach(btn=>{
+      btn.addEventListener("click",()=>openWa("Hola Zakti, quiero información sobre "+btn.dataset.training+"."));
+    });
+
+    const modal=document.getElementById("serviceModal");
+    const modalTitle=document.getElementById("modalTitle");
+    const modalText=document.getElementById("modalText");
+    const modalDuration=document.getElementById("modalDuration");
+    const modalPrice=document.getElementById("modalPrice");
+    const modalGroup=document.getElementById("modalGroup");
+    const modalWa=document.getElementById("modalWa");
+    let modalService=null;
+
+    function openService(i){
+      modalService=services[i];
+      modalTitle.textContent=modalService.name;
+      modalText.textContent=modalService.text;
+      modalDuration.textContent="Duración: "+modalService.duration;
+      modalPrice.textContent="Valor: "+modalService.price;
+      modalGroup.textContent=modalService.group;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden","false");
+      document.body.classList.add("no-scroll");
+    }
+    function closeModal(){
+      modal.classList.remove("open");modal.setAttribute("aria-hidden","true");document.body.classList.remove("no-scroll");
+    }
+    document.getElementById("modalClose").addEventListener("click",closeModal);
+    modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+    modalWa.addEventListener("click",()=>modalService&&openWa("Hola Zakti, quiero información sobre "+modalService.name+"."));
+
+    renderServices();
+  </script>
+</body>
+</html>
