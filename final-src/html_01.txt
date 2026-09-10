@@ -1,0 +1,223 @@
+dding-left:30px;border-left:1px solid #dcd0c9}
+    .training-item small{display:block;color:var(--rose-600);font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:7px}
+    .training-item strong{font-size:17px}.training-item span{display:block;color:var(--muted);font-size:13px;margin-top:5px}
+    .training-item button{border:0;background:transparent;color:var(--rose-600);font-size:22px}
+    @media(max-width:900px){.training-hero{grid-template-columns:1fr;gap:35px}.training-list{grid-template-columns:1fr}.training-item:nth-child(n){padding:22px 0;border-left:0}}
+
+    /* products */
+    .products-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+    .collage{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+    .collage img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:25px;box-shadow:var(--shadow-sm)}
+    .collage img:nth-child(2){margin-top:48px}
+    .product-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+    .product-tags span{border:1px solid var(--line);background:var(--rose-50);border-radius:999px;padding:9px 13px;font-size:13px;font-weight:600;color:var(--ink-2)}
+    @media(max-width:900px){.products-grid{grid-template-columns:1fr;gap:45px}}
+
+    /* corp */
+    .corp{background:var(--green-900);color:#fff}
+    .corp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center}
+    .corp .eyebrow{color:#d9a99b}.corp .section-copy{color:rgba(255,255,255,.68)}
+    .corp-points{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+    .corp-points div{border-left:1px solid #d9a99b;padding-left:15px;color:rgba(255,255,255,.86);font-weight:600}
+    .corp-card{background:#fff;color:var(--ink);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow)}
+    .corp-card h3{font-family:"DM Serif Display",Georgia,serif;font-size:35px;line-height:1.08;margin-bottom:16px}
+    .corp-card p{color:var(--muted);line-height:1.7}
+    @media(max-width:900px){.corp-grid{grid-template-columns:1fr;gap:42px}}
+
+    /* about */
+    .quote{text-align:center;max-width:940px;margin-inline:auto}
+    .quote blockquote{
+      font-family:"DM Serif Display",Georgia,serif;font-size:clamp(34px,5vw,56px);
+      line-height:1.12;margin:22px 0 25px
+    }
+    .quote p{max-width:760px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.8}
+    .doctor-mini{margin:30px auto 0;display:inline-flex;align-items:center;gap:14px;text-align:left}
+    .doctor-mini img{width:60px;height:60px;border-radius:50%;object-fit:cover;object-position:50% 18%}
+    .doctor-mini strong{display:block}.doctor-mini span{color:var(--muted);font-size:13px}
+
+    /* faq */
+    .faq{background:var(--cream)}
+    .faq-grid{display:grid;grid-template-columns:.65fr 1.35fr;gap:70px}
+    details{border-bottom:1px solid #d9cec8;padding:20px 0}
+    details:first-child{border-top:1px solid #d9cec8}
+    summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:25px;font-weight:700}
+    summary::-webkit-details-marker{display:none}
+    details p{margin:14px 38px 0 0;color:var(--muted);line-height:1.75}
+    .plus{font-size:24px;color:var(--rose-600);transition:transform .2s}
+    details[open] .plus{transform:rotate(45deg)}
+    @media(max-width:900px){.faq-grid{grid-template-columns:1fr;gap:35px}}
+
+    /* final CTA */
+    .final-cta{background:var(--rose-600);color:#fff;text-align:center}
+    .final-cta .container{max-width:880px}
+    .final-cta .eyebrow{color:rgba(255,255,255,.7)}
+    .final-cta .eyebrow::before{background:rgba(255,255,255,.7)}
+    .final-cta .section-title{font-size:clamp(44px,6vw,68px)}
+    .final-cta p{max-width:680px;margin:0 auto 30px;color:rgba(255,255,255,.78);font-size:18px;line-height:1.75}
+    .final-cta .btn{background:#fff;color:var(--rose-700)}
+
+    /* footer */
+    .footer{background:var(--ink);color:#fff;padding:64px 0 24px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:50px}
+    .footer-logo{display:inline-block;background:#fff;border-radius:15px;padding:6px 10px}
+    .footer-logo img{width:190px}
+    .footer p{color:rgba(255,255,255,.52);font-size:13px;line-height:1.65}
+    .footer-title{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:rgba(255,255,255,.37);font-weight:700;margin-bottom:14px}
+    .footer a{display:block;color:rgba(255,255,255,.72);margin:7px 0;font-size:14px}
+    .footer-bottom{margin-top:50px;padding-top:20px;border-top:1px solid rgba(255,255,255,.09);font-size:12px;color:rgba(255,255,255,.32)}
+    @media(max-width:760px){.footer-grid{grid-template-columns:1fr}}
+
+    /* whatsapp */
+    .wa-float{
+      position:fixed;right:20px;bottom:20px;z-index:60;border:0;border-radius:999px;
+      background:#1fa566;color:#fff;box-shadow:0 16px 40px rgba(31,165,102,.3);
+      padding:14px 18px;font-weight:700;display:flex;align-items:center;gap:9px
+    }
+    .wa-dot{width:9px;height:9px;border-radius:50%;background:#fff;box-shadow:0 0 0 5px rgba(255,255,255,.13)}
+    @media(max-width:520px){.wa-float span:last-child{display:none}.wa-float{width:52px;height:52px;padding:0;justify-content:center}.wa-dot{width:11px;height:11px}}
+
+    /* modal */
+    .modal-backdrop{
+      position:fixed;inset:0;z-index:100;background:rgba(20,20,18,.56);display:none;align-items:center;justify-content:center;padding:20px
+    }
+    .modal-backdrop.open{display:flex}
+    .modal{
+      width:min(560px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:28px;padding:30px;box-shadow:var(--shadow)
+    }
+    .modal-close{float:right;border:0;background:var(--rose-50);width:40px;height:40px;border-radius:50%;font-size:20px}
+    .modal h3{font-family:"DM Serif Display",Georgia,serif;font-size:36px;line-height:1.06;margin:20px 0 12px}
+    .modal p{color:var(--muted);line-height:1.7}
+    .modal-meta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}
+    .modal-meta span{background:var(--cream);border-radius:999px;padding:9px 12px;font-size:13px;font-weight:600}
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>Medellín · Atención presencial y opciones virtuales</span>
+      <div class="topbar-meta">
+        <span>zaktiayurveda@gmail.com</span>
+        <a href="#" data-wa="Hola Zakti, quiero recibir información.">WhatsApp +57 316 536 7579</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#inicio" aria-label="Zakti Ayurveda - Inicio">
+        <img src="assets/exact_00.webp" alt="Zakti Ayurveda">
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a class="nav-link" href="#servicios">Servicios</a>
+        <a class="nav-link" href="#formacion">Formación</a>
+        <a class="nav-link" href="#productos">Productos</a>
+        <a class="nav-link" href="#organizaciones">Organizaciones</a>
+        <a class="nav-link" href="#nosotros">Zakti</a>
+        <a class="btn btn-primary" href="#" data-wa="Hola Zakti, quiero información para agendar una consulta.">Agendar consulta</a>
+      </nav>
+
+      <button class="mobile-btn" id="mobileBtn" aria-expanded="false">Menú</button>
+    </div>
+
+    <div class="container mobile-menu" id="mobileMenu">
+      <a href="#servicios">Servicios</a>
+      <a href="#formacion">Formación</a>
+      <a href="#productos">Productos</a>
+      <a href="#organizaciones">Organizaciones</a>
+      <a href="#nosotros">Zakti</a>
+      <button data-wa="Hola Zakti, quiero información para agendar una consulta.">Agendar consulta</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Medicina Ayurveda e integrativa</span>
+          <h1>Una forma más humana de acompañar tu <em>salud.</em></h1>
+          <p class="hero-lead">
+            Zakti integra consulta médica, Ayurveda, terapias complementarias y educación para ayudarte a comprender tus necesidades y participar activamente en tu bienestar.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#" data-wa="Hola Zakti, quiero información para agendar una consulta con la Dra. Martha Montaño.">
+              Agendar por WhatsApp <span class="arrow">→</span>
+            </a>
+            <a class="btn btn-outline" href="#caminos">Conocer Zakti</a>
+          </div>
+
+          <div class="hero-trust">
+            <div><strong>Consulta integral</strong><span>Primera consulta de 1:30 a 2 horas</span></div>
+            <div><strong>Medellín</strong><span>Consultorio cerca de Unicentro</span></div>
+            <div><strong>Formación</strong><span>Cursos, talleres y diplomados</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="portrait-wrap">
+            <img class="portrait" src="assets/exact_01.webp" alt="Dra. Martha Montaño, creadora de Zakti Ayurveda">
+            <div class="doctor-card">
+              <small>Dra. Martha Montaño</small>
+              <strong>Médica Ayurveda y Naturópata</strong>
+              <span>Maestra Reiki · Terapia Biomagnética · Coach en PNL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="route-strip" id="caminos">
+      <div class="container routes">
+        <button class="route" data-scroll="#servicios">
+          <span class="route-index">01</span>
+          <h3>Quiero cuidar mi salud</h3>
+          <p>Empezar por una consulta médica integral y una orientación individual.</p>
+          <span>Conocer la consulta <i class="arrow">→</i></span>
+        </button>
+        <button class="route" data-scroll="#servicios">
+          <span class="route-index">02</span>
+          <h3>Quiero una terapia</h3>
+          <p>Explorar masajes Ayurveda y técnicas complementarias de bienestar.</p>
+          <span>Ver terapias <i class="arrow">→</i></span>
+        </button>
+        <button class="route" data-scroll="#formacion">
+          <span class="route-index">03</span>
+          <h3>Quiero aprender</h3>
+          <p>Encontrar cursos y diplomados para uso personal o profesional.</p>
+          <span>Ver formación <i class="arrow">→</i></span>
+        </button>
+        <button class="route" data-scroll="#organizaciones">
+          <span class="route-index">04</span>
+          <h3>Soy una organización</h3>
+          <p>Solicitar una charla, taller o propuesta para empresa o universidad.</p>
+          <span>Conocer la línea <i class="arrow">→</i></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container story-grid">
+        <div>
+          <span class="eyebrow">Consulta médica</span>
+          <h2 class="section-title">Comprender primero. Decidir después.</h2>
+          <p class="section-copy">
+            La consulta es el punto de partida para observar el estado actual de manera integral y orientar un proceso coherente con las necesidades de cada persona.
+          </p>
+          <ul class="story-points">
+            <li><span class="dot"></span><span>Primera consulta de 1:30 a 2 horas.</span></li>
+            <li><span class="dot"></span><span>Valor primera vez: $170.000 · Revisiones: $130.000.</span></li>
+            <li><span class="dot"></span><span>Orientación individual según el proceso y valoración.</span></li>
+          </ul>
+          <a href="#" class="btn btn-primary" style="margin-top:30px" data-wa="Hola Zakti, quiero información sobre la consulta médica integral.">
+            Consultar disponibilidad <span class="arrow">→</span>
+          </a>
+        </div>
+        <img class="story-image" src="assets/exact_02.webp" alt="Terapia de bienestar en Zakti">
+      </div>
+    </section>
+
+    <section class="section" style="background:var(--cream)">
+      <div class="container story-grid">
+        <img class="story-image" src="assets/exact_03.webp" alt=
