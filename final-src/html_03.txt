@@ -1,0 +1,107 @@
+.000",text:"Masaje facial manual japonés orientado al cuidado natural del rostro y la relajación."},
+      {name:"Chi Nei Tsang",group:"Terapias",duration:"45–60 min",price:"$130.000",text:"Trabajo corporal manual en abdomen orientado a conciencia corporal y bienestar."},
+      {name:"Terapias energéticas",group:"Terapias",duration:"45–60 min",price:"$130.000",text:"Reiki, sanación pránica y cristales como prácticas complementarias de bienestar."},
+      {name:"Sueroterapia",group:"Otros",duration:"30–45 min",price:"Desde $220.000",text:"Servicio complementario administrado bajo criterio profesional y sujeto a valoración."}
+    ];
+
+    const training = [
+      {name:"Formación en Reiki",tag:"3 niveles + maestría",price:"Desde $265.000"},
+      {name:"Flores de Bach",tag:"Formación intensiva",price:"$530.000"},
+      {name:"Radiónica y Radiestesia",tag:"2 días",price:"$720.000"},
+      {name:"Formación en Kobido",tag:"3 días",price:"$930.000"},
+      {name:"Ciclo de Cocina Ayurveda",tag:"10 talleres",price:"Desde $190.000"},
+      {name:"Diplomado en Nutrición y Masaje Ayurveda",tag:"Programa avanzado",price:"Desde $5.580.000"}
+    ];
+
+    function openWa(text){
+      window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(text),"_blank","noopener,noreferrer");
+    }
+
+    document.querySelectorAll("[data-wa]").forEach(el=>{
+      el.addEventListener("click",e=>{e.preventDefault();openWa(el.dataset.wa)});
+    });
+
+    const mobileBtn=document.getElementById("mobileBtn");
+    const mobileMenu=document.getElementById("mobileMenu");
+    mobileBtn.addEventListener("click",()=>{
+      const open=mobileMenu.classList.toggle("open");
+      mobileBtn.setAttribute("aria-expanded",String(open));
+    });
+    mobileMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>mobileMenu.classList.remove("open")));
+
+    document.querySelectorAll("[data-scroll]").forEach(el=>{
+      el.addEventListener("click",()=>{
+        document.querySelector(el.dataset.scroll)?.scrollIntoView({behavior:"smooth"});
+      });
+    });
+
+    const list=document.getElementById("serviceList");
+    const filters=document.querySelectorAll(".filter");
+    let active="Todos";
+
+    function renderServices(){
+      list.innerHTML=services
+        .filter(s=>active==="Todos"||s.group===active)
+        .map((s,i)=>`
+          <div class="service-row">
+            <div>
+              <h3>${s.name}</h3>
+              <p>${s.text}</p>
+            </div>
+            <div class="service-meta"><span>${s.duration}</span><strong>${s.price}</strong></div>
+            <button class="service-cta" data-service="${services.indexOf(s)}">Ver detalle <span class="arrow">→</span></button>
+          </div>
+        `).join("");
+      list.querySelectorAll("[data-service]").forEach(btn=>{
+        btn.addEventListener("click",()=>openService(+btn.dataset.service));
+      });
+    }
+
+    filters.forEach(btn=>btn.addEventListener("click",()=>{
+      filters.forEach(x=>x.classList.remove("active"));
+      btn.classList.add("active");active=btn.dataset.filter;renderServices();
+    }));
+
+    const trainingList=document.getElementById("trainingList");
+    trainingList.innerHTML=training.map(t=>`
+      <div class="training-item">
+        <div><small>${t.tag}</small><strong>${t.name}</strong><span>${t.price}</span></div>
+        <button aria-label="Consultar ${t.name}" data-training="${t.name}">→</button>
+      </div>
+    `).join("");
+    trainingList.querySelectorAll("[data-training]").forEach(btn=>{
+      btn.addEventListener("click",()=>openWa("Hola Zakti, quiero información sobre "+btn.dataset.training+"."));
+    });
+
+    const modal=document.getElementById("serviceModal");
+    const modalTitle=document.getElementById("modalTitle");
+    const modalText=document.getElementById("modalText");
+    const modalDuration=document.getElementById("modalDuration");
+    const modalPrice=document.getElementById("modalPrice");
+    const modalGroup=document.getElementById("modalGroup");
+    const modalWa=document.getElementById("modalWa");
+    let modalService=null;
+
+    function openService(i){
+      modalService=services[i];
+      modalTitle.textContent=modalService.name;
+      modalText.textContent=modalService.text;
+      modalDuration.textContent="Duración: "+modalService.duration;
+      modalPrice.textContent="Valor: "+modalService.price;
+      modalGroup.textContent=modalService.group;
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden","false");
+      document.body.classList.add("no-scroll");
+    }
+    function closeModal(){
+      modal.classList.remove("open");modal.setAttribute("aria-hidden","true");document.body.classList.remove("no-scroll");
+    }
+    document.getElementById("modalClose").addEventListener("click",closeModal);
+    modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
+    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+    modalWa.addEventListener("click",()=>modalService&&openWa("Hola Zakti, quiero información sobre "+modalService.name+"."));
+
+    renderServices();
+  </script>
+</body>
+</html>
