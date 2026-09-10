@@ -1,0 +1,218 @@
+"Masaje Ayurveda con aceite">
+        <div>
+          <span class="eyebrow">Terapias y cuidado corporal</span>
+          <h2 class="section-title">El cuerpo también necesita espacios de cuidado.</h2>
+          <p class="section-copy">
+            Masajes Ayurveda y técnicas complementarias se integran como experiencias de bienestar dentro de un acompañamiento individual y responsable.
+          </p>
+          <ul class="story-points">
+            <li><span class="dot"></span><span>Abhyanga y masajes Ayurveda.</span></li>
+            <li><span class="dot"></span><span>Kobido, Shantala, Padyam y otras técnicas.</span></li>
+            <li><span class="dot"></span><span>Terapias complementarias según valoración.</span></li>
+          </ul>
+          <a href="#servicios" class="btn btn-outline" style="margin-top:30px">Explorar servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="servicios">
+      <div class="container services-layout">
+        <div>
+          <span class="eyebrow">Servicios</span>
+          <h2 class="section-title">Encuentra el acompañamiento adecuado.</h2>
+          <p class="section-copy">
+            Los servicios están organizados por categoría para facilitar la elección y llevar cada consulta directamente a WhatsApp.
+          </p>
+          <div class="filters" id="filters">
+            <button class="filter active" data-filter="Todos">Todos</button>
+            <button class="filter" data-filter="Consulta">Consulta</button>
+            <button class="filter" data-filter="Masajes">Masajes</button>
+            <button class="filter" data-filter="Terapias">Terapias</button>
+            <button class="filter" data-filter="Otros">Otros</button>
+          </div>
+        </div>
+        <div class="service-list" id="serviceList"></div>
+      </div>
+    </section>
+
+    <section class="section training" id="formacion">
+      <div class="container">
+        <div class="training-hero">
+          <div>
+            <span class="eyebrow">Formación Zakti</span>
+            <h2 class="section-title">Aprender para transformar.</h2>
+            <p class="section-copy">
+              Cursos, talleres y diplomados para quienes buscan herramientas aplicables a su vida diaria o desean profundizar en su ejercicio profesional.
+            </p>
+          </div>
+          <img class="training-img" src="assets/exact_04.webp" alt="Formación y alimentación Ayurveda">
+        </div>
+        <div class="training-list" id="trainingList"></div>
+      </div>
+    </section>
+
+    <section class="section" id="productos">
+      <div class="container products-grid">
+        <div class="collage">
+          <img src="assets/exact_05.webp" alt="Productos botánicos y bienestar">
+          <img src="assets/exact_06.webp" alt="Flores y preparados de bienestar">
+        </div>
+        <div>
+          <span class="eyebrow">Productos Zakti</span>
+          <h2 class="section-title">Herramientas para acompañar el autocuidado cotidiano.</h2>
+          <p class="section-copy">
+            Zakti ofrece una selección inicial de productos que complementan prácticas de cuidado personal. En esta primera etapa, la compra se gestiona directamente por WhatsApp.
+          </p>
+          <div class="product-tags">
+            <span>Jabones ayurvédicos</span>
+            <span>Crema de caléndula</span>
+            <span>Bálsamo labial</span>
+            <span>Pote Neti</span>
+            <span>Ghee seleccionado</span>
+          </div>
+          <a href="#" class="btn btn-outline" style="margin-top:30px" data-wa="Hola Zakti, quiero conocer los productos disponibles y sus precios.">
+            Consultar productos <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section corp" id="organizaciones">
+      <div class="container corp-grid">
+        <div>
+          <span class="eyebrow">Empresas y universidades</span>
+          <h2 class="section-title">El conocimiento de Zakti también puede llegar a tu organización.</h2>
+          <p class="section-copy">
+            Charlas, talleres, programas de bienestar y actividades dirigidas a equipos, estudiantes y profesionales vinculados con la salud.
+          </p>
+          <div class="corp-points">
+            <div>Charlas y talleres</div>
+            <div>Bienestar para equipos</div>
+            <div>Formación profesional</div>
+            <div>Modalidad presencial o virtual</div>
+          </div>
+        </div>
+        <div class="corp-card">
+          <span class="eyebrow">Propuesta a la medida</span>
+          <h3>Cuéntanos qué necesita tu organización.</h3>
+          <p>Podemos estructurar el alcance según público, objetivo, modalidad, duración y temática.</p>
+          <a class="btn btn-primary" href="#" data-wa="Hola Zakti, represento una empresa o universidad y quiero conocer su portafolio corporativo.">
+            Solicitar propuesta
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nosotros">
+      <div class="container quote">
+        <span class="eyebrow">La esencia de Zakti</span>
+        <blockquote>“Acompañar a cada persona como un ser único y entregarle herramientas para participar activamente en su bienestar.”</blockquote>
+        <p>
+          Zakti nace de la búsqueda de una mirada más integral de la práctica médica. Ese camino llevó a la Dra. Martha Montaño a profundizar en Ayurveda y complementar su formación con distintas técnicas terapéuticas.
+        </p>
+        <div class="doctor-mini">
+          <img src="assets/exact_01.webp" alt="Dra. Martha Montaño">
+          <div><strong>Dra. Martha Montaño</strong><span>Creadora de Zakti Ayurveda</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="container faq-grid">
+        <div>
+          <span class="eyebrow">Preguntas frecuentes</span>
+          <h2 class="section-title">Antes de comenzar.</h2>
+          <p class="section-copy">Respuestas rápidas para orientar mejor la primera conversación.</p>
+        </div>
+        <div>
+          <details open>
+            <summary><span>¿Dónde atiende Zakti?</span><span class="plus">+</span></summary>
+            <p>Actualmente la atención presencial se realiza en Medellín, cerca del Centro Comercial Unicentro. Algunos procesos también pueden desarrollarse de forma virtual.</p>
+          </details>
+          <details>
+            <summary><span>¿Cómo sé qué servicio necesito?</span><span class="plus">+</span></summary>
+            <p>Puedes escribir por WhatsApp y contar brevemente qué estás buscando. Zakti te orientará sobre el mejor punto de entrada.</p>
+          </details>
+          <details>
+            <summary><span>¿Los cursos incluyen certificación?</span><span class="plus">+</span></summary>
+            <p>Varios programas incluyen certificación y materiales. Las condiciones específicas se confirman en la información de cada formación.</p>
+          </details>
+          <details>
+            <summary><span>¿Puedo contratar una actividad para una empresa o universidad?</span><span class="plus">+</span></summary>
+            <p>Sí. Zakti está desarrollando una línea de charlas, talleres y propuestas para organizaciones y profesionales relacionados con salud y bienestar.</p>
+          </details>
+          <details>
+            <summary><span>¿Puedo comprar productos en línea?</span><span class="plus">+</span></summary>
+            <p>En esta primera etapa la consulta y compra se gestiona por WhatsApp. Más adelante la web puede integrar pago y automatización.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container">
+        <span class="eyebrow">Tu siguiente paso</span>
+        <h2 class="section-title">Tu proceso puede empezar con una conversación.</h2>
+        <p>Cuéntanos qué estás buscando y recibe orientación sobre consulta, terapias, formación, productos o propuestas para organizaciones.</p>
+        <a class="btn" href="#" data-wa="Hola Zakti, quiero recibir información y saber cuál puede ser el mejor camino para mí.">
+          Hablar con Zakti por WhatsApp <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo"><img src="assets/exact_00.webp" alt="Zakti Ayurveda"></div>
+          <p style="margin-top:18px;max-width:360px">Empoderar para la salud, equilibrio y bienestar.</p>
+        </div>
+        <div>
+          <div class="footer-title">Contacto</div>
+          <a href="#" data-wa="Hola Zakti, quiero recibir información.">+57 316 536 7579</a>
+          <a href="mailto:zaktiayurveda@gmail.com">zaktiayurveda@gmail.com</a>
+          <p>Medellín, Colombia · Cerca de Unicentro</p>
+        </div>
+        <div>
+          <div class="footer-title">Importante</div>
+          <p>La información de este sitio es orientativa y no sustituye una valoración médica individual. Los servicios complementarios se realizan según valoración y criterio profesional.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Zakti Ayurveda · Dra. Martha Montaño</div>
+    </div>
+  </footer>
+
+  <button class="wa-float" data-wa="Hola Zakti, quiero recibir información." aria-label="Abrir WhatsApp de Zakti">
+    <span class="wa-dot"></span><span>WhatsApp</span>
+  </button>
+
+  <div class="modal-backdrop" id="serviceModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+      <span class="eyebrow" id="modalGroup">Servicio</span>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+      <div class="modal-meta">
+        <span id="modalDuration"></span>
+        <span id="modalPrice"></span>
+      </div>
+      <button class="btn btn-primary" id="modalWa">Consultar por WhatsApp <span class="arrow">→</span></button>
+    </div>
+  </div>
+
+  <script>
+    const WHATSAPP = "573165367579";
+
+    const services = [
+      {name:"Consulta médica integral",group:"Consulta",duration:"1:30–2 h",price:"$170.000",text:"Evaluación individual para comprender el estado actual, hábitos y necesidades, y orientar una ruta de acompañamiento."},
+      {name:"Abhyanga",group:"Masajes",duration:"45–90 min",price:"Desde $130.000",text:"Masaje Ayurveda con aceites tibios, adaptado al proceso y necesidades de cada persona."},
+      {name:"Masaje para embarazadas",group:"Masajes",duration:"60 min",price:"$170.000",text:"Acompañamiento corporal desde el cuarto mes de gestación, sujeto a valoración."},
+      {name:"Basti",group:"Terapias",duration:"45 min",price:"$200.000",text:"Aplicación localizada de aceite tibio dentro de un proceso de cuidado individual."},
+      {name:"Netrabasti",group:"Terapias",duration:"45–60 min",price:"$200.000",text:"Técnica Ayurveda tradicional para el área ocular, realizada según valoración profesional."},
+      {name:"Nasya / Karnapurana",group:"Terapias",duration:"40 min",price:"Desde $100.000",text:"Técnicas tradicionales para nariz y oído, integradas como apoyo complementario."},
+      {name:"Masaje de espalda",group:"Masajes",duration:"40 min",price:"$130.000",text:"Masaje con aceite tibio orientado al descanso y relajación de la espalda."},
+      {name:"Padyam",group:"Masajes",duration:"45–60 min",price:"$130.000",text:"Masaje Ayurveda de pies con trabajo manual sobre puntos tradicionales."},
+      {name:"Shantala",group:"Masajes",duration:"45 min",price:"$130.000",text:"Espacio acompañado para aprender masaje tradicional para bebés y niños."},
+      {name:"Udvartanam",group:"Masajes",duration:"60 min",price:"$200.000",text:"Técnica corporal tradicional con polvos o cremas dentro de procesos de autocuidado."},
+      {name:"Masaje Kobido",group:"Masajes",duration:"60–75 min",price:"$160
