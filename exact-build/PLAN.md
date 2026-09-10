@@ -1,0 +1,1 @@
+La versión final se reconstruye desde el HTML aprobado sin cambiar diseño, proporciones ni calidad de imágenes. Las imágenes se conservarán en sus bytes originales y solo se reemplazarán las URI embebidas por rutas locales para GitHub Pages.
